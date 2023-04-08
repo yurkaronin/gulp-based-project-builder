@@ -1,0 +1,46 @@
+.manufacturer {
+  &__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    border: 1px solid #d9d9d9;
+    min-height: 200px;
+    max-width: 352px;
+    margin-right: auto;
+
+    margin-bottom: 32px;
+    position: sticky;
+    top: 170px;
+
+    img {
+      display: block;
+      max-height: 40px;
+      object-fit: contain;
+    }
+  }
+  .section__grid {
+    grid-template-columns: 1fr 2fr;
+  }
+  &__text {
+    margin-bottom: 42px;
+  }
+
+  & + .slider {
+    padding-top: 0;
+  }
+
+  @media (max-width: 1250px) {
+    &__logo {
+      position: initial;
+      margin-bottom: 0;
+    }
+  }
+  @media (max-width: 768px) {
+    .section__grid {
+      grid-template-columns: 1fr;
+    }
+
+
+  }
+}

@@ -1,0 +1,27 @@
+.features-group {
+  display: grid;
+  gap: 32px;
+  grid-template-columns: 1fr 1fr;
+  align-items: flex-start;
+  margin-bottom: 32px;
+  width: 100%;
+  max-width: 100%;
+
+  &__item {
+    font-size: 16px;
+    text-align: right;
+    color: #000000;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+
+    &:not(:last-of-type) {
+      border-bottom: 1px dashed #0000002e;
+    }
+  }
+  &__name {
+    color: #909090;
+    margin-right: auto;
+  }
+}

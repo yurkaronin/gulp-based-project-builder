@@ -1,0 +1,66 @@
+.custom-form {
+  max-width: 736px;
+  margin: 0 auto;
+  &__item {
+    margin-bottom: 28px;
+  }
+
+  &__label {
+    display: block;
+    font-family: var(--Roboto);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #373737;
+    margin-bottom: 10px;
+  }
+  .sup,
+  sup {
+    color: #44a611;
+    font-size: 16px;
+    line-height: 1;
+  }
+  &__helper {
+    text-align: center;
+    max-width: max-content;
+    margin: 0 auto;
+    color: #373737;
+    font-size: 16px;
+
+    * + & {
+      margin-top: 23px;
+    }
+  }
+  input,
+  textarea {
+    font-family: var(--Roboto);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #909090;
+    display: block;
+    padding: 10px 25px;
+    background: #ffffff;
+    border: 1px solid #d9d9d9;
+    max-width: 100%;
+    width: 100%;
+  }
+  textarea {
+    height: 100px;
+  }
+  .custom-select {
+    max-width: 100%;
+  }
+  .custom-select__selected {
+    justify-content: space-between;
+  }
+
+  &__solo {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+}

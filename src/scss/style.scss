@@ -1,0 +1,200 @@
+@charset "utf-8";
+
+// переменные
+:root {
+  --Oswald: "Oswald", sans-serif;
+  --Roboto: "Roboto", sans-serif;
+  --Rubik: "Rubik", sans-serif;
+
+  --text: #5f5f5f;
+  --text2: #909090;
+  --bg: #ffffff;
+  --line: #d9d9d9;
+  --line2: #909090;
+
+  --Darkgrey: #373737;
+  --Gray: #f7f7f7;
+  --Gray2: #eaeaea;
+
+  --Green: #67cb33;
+  --GreenOver: #44a611;
+
+  --Dark: #1c1e20;
+
+  --Yellow: #ffe603;
+
+  --White: #ffffff;
+  --Black: #000000;
+
+  --font-size: 16px;
+}
+
+.grid-mod {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(auto-fit, (minmax(150px, 1fr)));
+}
+
+@import "site/fonts";
+@import "site/global";
+@import "site/animate";
+// служебные
+@import "bem/list-reset";
+@import "bem/visually-hidden";
+@import "bem/wrapper";
+@import "bem/button";
+// повторяющиеся
+@import "bem/title";
+@import "bem/subtitle";
+@import "bem/logo";
+@import "bem/menu";
+@import "bem/tel";
+@import "bem/custom-select";
+@import "bem/search";
+@import "bem/user-panel";
+@import "bem/menu-button";
+@import "bem/section";
+@import "bem/link-more";
+@import "bem/statistics-panel";
+@import "bem/statistics-card";
+@import "bem/article-preview";
+@import "bem/order-search";
+@import "bem/order-list";
+@import "bem/order-item";
+@import "bem/accordion";
+@import "bem/number";
+@import "bem/cart-button";
+@import "bem/email";
+@import "bem/copyright";
+@import "bem/site-developers";
+@import "bem/ronald";
+@import "bem/clickable-overlay";
+@import "bem/fixed-area";
+@import "bem/modal";
+@import "bem/overlay";
+@import "bem/breadcrumbs";
+@import "bem/price-range";
+@import "bem/sort-order";
+@import "bem/product-card";
+@import "bem/pagination";
+@import "bem/amount-to-show";
+@import "bem/sticky-content";
+@import "bem/catalog-grid";
+@import "bem/message";
+@import "bem/document";
+@import "bem/swiper";
+@import "bem/image";
+@import "bem/backup";
+@import "bem/item-article";
+@import "bem/features-group";
+@import "bem/map";
+@import "bem/input-number";
+@import "bem/custom-form";
+
+// Смысловые секции
+@import "sections/header";
+@import "sections/mobile-menu";
+@import "sections/mobile-user-panel";
+@import "sections/mobile-search";
+@import "sections/catalog-menu";
+@import "sections/catalog-preview";
+@import "sections/posts-preview";
+@import "sections/user-orders";
+@import "sections/footer";
+@import "sections/catalog-filter";
+@import "sections/product-catalog";
+@import "sections/brands";
+@import "sections/article";
+@import "sections/full-product-card";
+@import "sections/manufacturer";
+@import "sections/glossary-terms";
+@import "sections/contacts";
+@import "sections/my-cart";
+@import "sections/user-cabinet";
+
+
+.card-label__list {
+  * + & {
+    margin-top: 16px;
+  }
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  .card-label {
+    margin-right: 16px;
+  }
+}
+
+.card-label {
+  font-family: var(--Roboto);
+  height: 32px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+}
+
+// активные состояния компонентов
+.mobile-search-open {
+  overflow: hidden;
+
+  .header {
+    border-color: transparent;
+  }
+}
+.mobile-menu-open {
+  overflow: hidden;
+}
+
+.catalog-menu-open {
+  overflow: hidden;
+  .catalog-menu {
+    left: 0;
+  }
+  .clickable-overlay {
+    opacity: 1;
+    pointer-events: initial;
+    cursor: pointer;
+  }
+}
+
+.catalog-menu-step-2 {
+  .catalog-menu__tabs {
+    left: -100vh;
+    z-index: 0;
+  }
+  .catalog-menu__content {
+    opacity: 1;
+    pointer-events: initial;
+    left: 0;
+  }
+}
+
+.filter-open {
+  .product-catalog__aside {
+    left: 0;
+  }
+  .clickable-overlay {
+    opacity: 1;
+    pointer-events: initial;
+    cursor: pointer;
+    z-index: 999;
+  }
+}
+
+.order-choice li:first-child {
+  border-top: 1px solid #d9d9d9;
+}
+
+.section--bb {
+  .wrapper {
+    border-bottom: 1px solid #d9d9d9;
+  }
+}
+
+.sticky {
+  position: sticky;
+  top: 170px;
+}

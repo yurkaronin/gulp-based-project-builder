@@ -1,0 +1,41 @@
+h1,h2,h3,h4,h5,h6 {
+  font-family: var(--Oswald);
+  font-style: normal;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--Darkgrey);
+}
+
+.title {
+  margin: 0;
+  display: block;
+  max-width: max-content;
+  font-family: var(--Oswald);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 1.25;
+  text-transform: uppercase;
+  color: var(--Dark);
+
+  &--mid {
+    font-size: 22px;
+    line-height: 1.45;
+    color: var(--Darkgrey);
+  }
+
+  &--min {
+    font-size: 20px;
+    line-height: 1.4;
+    color: var(--Darkgrey);
+  }
+  &--lit {
+    font-size: 18px;
+    line-height: 1.33;
+    color: var(--Darkgrey);
+  }
+
+  @media (max-width: 550px) {
+    font-size: 25px;
+  }
+}

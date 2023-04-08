@@ -1,0 +1,33 @@
+.input-number {
+  height: 48px;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  text-align: center;
+  max-width: 170px;
+
+  &__button {
+    width: 30px;
+    height: 30px;
+    background-color: #f0f0f0;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 16px;
+  }
+
+  &__button--minus {
+    border: none;
+    background-color: transparent;
+  }
+
+  &__button--plus {
+    border: none;
+    background-color: transparent;
+  }
+}
+
+

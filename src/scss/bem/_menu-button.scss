@@ -1,0 +1,7 @@
+.menu-button {
+  display: none;
+
+  @media (max-width: 1023px) {
+    display: flex;
+  }
+}

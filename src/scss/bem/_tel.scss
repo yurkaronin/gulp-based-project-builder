@@ -1,0 +1,35 @@
+.tel {
+  display: flex;
+  align-items: center;
+  position: relative;
+  max-width: max-content;
+
+  &::before {
+    content: "";
+    display: block;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M7.64678 14.3532C12.2349 18.9413 16.6178 19.9122 18.2355 20C19.2688 18.4856 19.706 17.2353 20 16.1177C18.8824 15.0296 17.2552 13.919 15.7648 13.2941L14.0003 15.059C13.3974 14.8973 11.7427 14.2135 9.76463 12.2354C7.78703 10.2578 7.10271 8.60313 6.94099 8.00017L8.70595 6.2352C8.08103 4.74427 6.97044 3.11758 5.88231 2C4.76474 2.29399 3.51439 2.73074 2 3.76496C2.08835 5.38217 3.05868 9.76463 7.64678 14.3532Z' stroke='%2344A611' stroke-width='2' stroke-miterlimit='10'/%3e%3c/svg%3e ");
+    width: 20px;
+    height: 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-right: 10px;
+  }
+
+  a {
+    font-family: var(--Oswald);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.33;
+    text-align: right;
+    color: rgba(#373737, 0.9);
+    flex-grow: 2;
+    transition: color 0.3s;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: var(--Darkgrey);
+    }
+  }
+}

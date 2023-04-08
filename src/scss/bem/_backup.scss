@@ -1,0 +1,26 @@
+.backup {
+  font-family: var(--Roboto);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  text-transform: uppercase;
+  color: #373737;
+  position: relative;
+  display: flex;
+  max-width: max-content;
+  align-items: center;
+  padding-top: 14px;
+
+  &::before {
+    content: "";
+    display: block;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='8' height='12' fill='none'%3e%3cpath stroke='%2367CB33' stroke-width='2' d='M7 11 2 6l5-5'/%3e%3c/svg%3e");
+    width: 10px;
+    height: 13px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    flex-shrink: 0;
+    transition: all 0.3s;
+    margin-right: 12px;
+  }
+}

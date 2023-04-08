@@ -1,0 +1,248 @@
+.footer {
+  background-color: #f7f7f7;
+  color: #909090;
+  padding: 32px 0 26px;
+
+  &__grid {
+    display: grid;
+    gap: 32px;
+    grid-template-columns: 6fr 2fr 4fr;
+  }
+  &__right {
+    text-align: right;
+    margin-left: auto;
+  }
+  .tel {
+    margin-left: auto;
+  }
+  &__menu-link {
+    display: block;
+    font-family: var(--Oswald);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.56;
+    text-transform: uppercase;
+    color: rgba(#373737, 0.9);
+    transition: all 0.3s;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: var(--GreenOver);
+    }
+  }
+  &__menu-list {
+    display: grid;
+    gap: 24px 32px;
+    grid-template-columns: 4fr 2fr;
+    align-content: start;
+    &--mod {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+  }
+  &__submenu {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px 32px;
+    margin-top: 10px;
+  }
+
+  &__menu-item:nth-child(1) {
+    .footer__submenu {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  &__submenu-link {
+    position: relative;
+    display: grid;
+    grid-template-columns: 10px 1fr;
+    align-items: center;
+    gap: 15px;
+    transition: all 0.3s;
+
+    &::before {
+      content: "";
+      display: block;
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='7' height='10' viewBox='0 0 7 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1 9L5 5L1 1' stroke='%2367CB33' stroke-width='2'/%3e%3c/svg%3e ");
+      width: 10px;
+      height: 10px;
+      background-repeat: no-repeat;
+      flex-shrink: 0;
+      transition: all 0.3s;
+    }
+    span {
+      flex-grow: 2;
+    }
+    &:hover,
+    &:active,
+    &:focus {
+      transform: translateX(8px);
+
+      span {
+        color: var(--GreenOver);
+      }
+    }
+  }
+}
+
+.footer__button {
+  display: none;
+}
+
+.footer .tel {
+  margin-bottom: 12px;
+}
+
+@media (max-width: 1440px) {
+  .footer__grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .footer__right {
+    margin-left: initial;
+    width: 100%;
+    max-width: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    gap: 10px 32px;
+    align-items: center;
+  }
+
+  .footer {
+    .copyright {
+      grid-column: 2;
+      grid-row: 1;
+    }
+    .site-developers {
+      grid-column: 2;
+    }
+    .tel {
+      margin-left: initial;
+    }
+    .email {
+      text-align: initial;
+      grid-column: 1;
+    }
+  }
+  .footer__right {
+    grid-column: span 4;
+  }
+  .footer__menu-list {
+    grid-column: span 3;
+  }
+  .footer__menu-list--mod {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 1023px) {
+  .footer {
+    padding-bottom: 84px;
+  }
+
+  .footer__grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .footer__menu-list {
+    grid-column: span 3;
+  }
+  .footer__menu-list--mod {
+    grid-column: span 1;
+  }
+  .footer__right {
+    grid-column: span 2;
+  }
+  .footer__right {
+    display: block;
+  }
+  .footer .tel {
+    margin-left: auto;
+  }
+  .footer .email {
+    max-width: max-content;
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 680px) {
+  .footer__grid {
+    grid-template-columns: 1fr;
+  }
+  .footer__menu-list {
+    grid-column: initial;
+  }
+  .footer__menu-list--mod {
+    grid-column: initial;
+  }
+  .footer__right {
+    grid-column: initial;
+  }
+  .footer__menu-list {
+    grid-template-columns: 1fr;
+  }
+  .footer__menu-item:nth-child(1) .footer__submenu {
+    grid-template-columns: 1fr;
+  }
+  .footer .tel {
+    margin-left: initial;
+  }
+  .footer .email {
+    margin-left: initial;
+  }
+  .footer .copyright {
+    text-align: initial;
+  }
+  .site-developers {
+    justify-content: initial;
+  }
+
+  .footer__button {
+    display: flex;
+    background-color: transparent;
+  }
+  .footer__menu-link-wrap {
+    display: grid;
+    grid-template-columns: 1fr 48px;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .footer .button--icon:hover path {
+    stroke: transparent;
+  }
+
+  .footer .decorate {
+    background: transparent
+  }
+
+  .footer__submenu {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    margin: 0;
+  }
+  .footer__menu-link-wrap {
+    border-bottom: 1px solid var(--line);
+  }
+
+  // Актвности
+  .open + .footer__submenu {
+    opacity: 1;
+    max-height: 1000px;
+    transition: all 0.3s ease-in-out;
+    padding-top: 32px;
+  }
+
+  .move {
+    transition: transform 0.3s;
+  }
+
+  .open .move {
+    transform: translateX(100%) rotate(90deg);
+  }
+}

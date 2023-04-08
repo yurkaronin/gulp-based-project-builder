@@ -1,20 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Project</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Техническая страница: список страниц проекта</title>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="stylesheet" href="dist/libs/normalize.min.css">
+  <link rel="stylesheet" href="dist/css/style.min.css">
+
 </head>
+
 <body>
-    <!-- Подключаем секцию header -->
-    @@include('SECTIONS/header.html')
+  <!-- Подключаем секцию header -->
+  <header class="header">
+    <div class="wrapper">
+      <h2 class="title">Шапка</h2>
+    </div>
+  </header>
 
-    <!-- Подключаем блок carousel -->
-    @@include('SECTIONS/first-screen.html')
+  <!-- Здесь может быть основной контент страницы -->
+  <main>
+    <section class="tech">
+      <div class="wrapper">
+        <h2 class="title">Список готовых страниц</h2>
 
-    <!-- Здесь может быть основной контент страницы -->
+        <ol>
+          <li><a href="./dist/home.html">Главная</a></li>
+          <li><a href="./dist/about.html">О компании</a></li>
+          <li><a href="./dist/contacts.html">Контакты</a></li>
+          <li><a href="./dist/products.html">Продукция</a></li>
 
-    <!-- Подключаем секцию footer -->
-    @@include('SECTIONS/footer.html')
+        </ol>
+      </div>
+    </section>
+  </main>
+
+  <!-- Подключаем секцию footer -->
+  <footer class="footer">
+    <div class="wrapper">
+      <h2 class="title">Подвал</h2>
+    </div>
+  </footer>
+
+  <script src="dist/libs/swiper-bundle.min.js"></script>
+  <script src="dist/js/main.min.js"></script>
 </body>
+
 </html>

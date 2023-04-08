@@ -1,0 +1,125 @@
+// "Rubik", sans-serif
+@font-face {
+  font-display: swap;
+  font-family: "Rubik";
+  src: local("Rubik"), local("Rubik-Regular"),
+  url("../fonts/Rubik.woff2") format("woff2"),
+  url("../fonts/Rubik.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Rubik";
+  src: local("Rubik Medium"), local("Rubik-Medium"),
+  url("../fonts/Rubikmedium.woff2") format("woff2"),
+    url("../fonts/Rubikmedium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Rubik";
+  src: local("Rubik Bold"), local("Rubik-Bold"),
+  url("../fonts/Rubikbold.woff2") format("woff2"),
+    url("../fonts/Rubikbold.woff") format("woff"),;
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Rubik";
+  src: local("Rubik Black"), local("Rubik-Black"),
+  url("../fonts/Rubikblack.woff2") format("woff2"),
+    url("../fonts/Rubikblack.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+}
+
+// "Oswald", sans-serif
+@font-face {
+  font-display: swap;
+  font-family: 'Oswald';
+  src: local('Oswald Regular'), local('Oswald-Regular'),
+  url('../fonts/Oswaldregular.woff2') format('woff2'),
+  url('../fonts/Oswaldregular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-display: swap;
+  font-family: 'Oswald';
+  src: local('Oswald DemiBold'),
+  local('Oswald-DemiBold'),
+  url('../fonts/Oswalddemibold.woff2') format('woff2'),
+  url('../fonts/Oswalddemibold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-display: swap;
+  font-family: 'Oswald';
+  src: local('Oswald Medium'), local('Oswald-Medium'),
+  url('../fonts/Oswaldmedium.woff2') format('woff2'),
+  url('../fonts/Oswaldmedium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-display: swap;
+  font-family: 'Oswald';
+  src: local('Oswald Bold'),
+  local('Oswald-Bold'),
+  url('../Oswaldbold.woff2') format('woff2'),
+  url('../Oswaldbold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+// "Roboto", sans-serif
+@font-face {
+  font-display: swap;
+  font-family: 'Roboto';
+  src: local('Roboto'), local('Roboto-Regular'),
+  url('../fonts/Roboto.woff2') format('woff2'),
+  url('../fonts/Roboto.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Roboto';
+  src: local('Roboto Medium'),
+  local('Roboto-Medium'),
+  url('../fonts/Robotomedium.woff2') format('woff2'),
+  url('../fonts/Robotomedium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Roboto';
+  src: local('Roboto Bold'),
+  local('Roboto-Bold'),
+  url('../fonts/Robotobold.woff2') format('woff2'),
+  url('../fonts/Robotobold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Roboto';
+  src: local('Roboto Black'),
+  local('Roboto-Black'),
+  url('../fonts/Robotoblack.woff2') format('woff2'),
+  url('../fonts/Robotoblack.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+}
+

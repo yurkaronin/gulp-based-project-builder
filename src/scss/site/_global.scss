@@ -1,0 +1,63 @@
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html *,
+html *::before,
+html *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 375px;
+  background-color: var(--bg);
+  line-height: 1.5;
+  font-weight: 400;
+  font-size: 16px;
+  font-family: "Roboto";
+  font-style: normal;
+  color: var(--text);
+
+  position: relative;
+  overflow-x: hidden;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+input,
+textarea,
+a,
+button {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+:focus {
+  outline-style: none;
+  outline-width: 0px !important;
+  outline-color: transparent !important;
+}
+li::marker {
+  color: var(--Green);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}

@@ -1,0 +1,23 @@
+.site-developers {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+
+  font-family: var(--Roboto);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--Grey);
+  &__link {
+    color: var(--Green);
+  }
+  &__logo {
+    display: block;
+
+    * + & {
+      margin-left: 16px;
+    }
+  }
+}

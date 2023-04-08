@@ -1,0 +1,40 @@
+.breadcrumbs {
+  padding: 22px 0 15px;
+  max-width: 100%;
+  overflow-x: auto;
+
+  ul {
+    display: flex;
+    align-items: center;
+  }
+
+  li:not(:last-child) {
+    padding-right: 44px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+
+    &:after {
+      content: '';
+      display: block;
+      width: 12px;
+      height: 1px;
+      background-color: #67CB33;
+      position: absolute;
+      right: 16px;
+    }
+  }
+  a {
+    font-family: var(--Roboto);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: #909090;
+    white-space: nowrap;
+  }
+
+  a:not([href]) {
+    color: #373737;
+  }
+}

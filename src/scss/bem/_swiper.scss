@@ -1,0 +1,7 @@
+.swiper-button-next,
+.swiper-button-prev {
+  position: absolute;
+  &:after {
+    display: none;
+  }
+}
