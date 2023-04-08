@@ -9,6 +9,7 @@ const rename = require('gulp-rename');
 const rm = require('gulp-rm');
 const gcmq = require('gulp-group-css-media-queries');
 const order = require('gulp-order');
+const sassGlob = require('gulp-sass-glob');
 
 
 gulp.task('cleaner', function () {
@@ -46,14 +47,13 @@ gulp.task('fonts', function () {
 // Обработка libs
 gulp.task('libs', function () {
   return gulp.src('src/libs/**/*')
-    // .pipe(uglify())
-    // .pipe(rename({ suffix: '.min' }))
     .pipe(gulp.dest('dist/libs'));
 });
 
 // Обработка SCSS
 gulp.task('scss', function () {
-  return gulp.src('src/scss/**/*.scss')
+  return gulp.src('src/scss/main.scss')
+    .pipe(sassGlob())
     .pipe(scss().on('error', scss.logError))
     .pipe(gcmq())
     .pipe(autoprefixer({
@@ -64,11 +64,12 @@ gulp.task('scss', function () {
     .pipe(gulp.dest('dist/css'));
 });
 
+
 gulp.task('js', function () {
   return gulp.src('src/js/*.js')
     .pipe(order([
-      'js/parts/*.js', // Сначала добавьте все файлы из каталога parts
-      'src/js/*.js' // Затем добавьте остальные файлы из каталога src/js
+      'js/parts/*.js',
+      'src/js/*.js'
     ]))
     .pipe(concat('main.js'))
     .pipe(uglify())
